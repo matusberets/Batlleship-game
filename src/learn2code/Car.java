@@ -40,7 +40,7 @@ public class Car {
             String tempCarName = input.next();
             newCarsName[i] = tempCarName;
         }
-        System.out.println("Cars object total created count = " + carInstancesCount);
+        System.out.println("\nCars object total created count = " + carInstancesCount);
         System.out.println("");
 
         for (String car : newCarsName) {

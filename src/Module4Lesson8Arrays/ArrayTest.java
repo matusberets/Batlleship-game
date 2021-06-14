@@ -5,6 +5,8 @@ package Module4Lesson8Arrays;
  fill an array with these numbers  and the ask for searching one of these
 */
 
+import learn2code.Car;
+
 import java.util.*;
 import java.util.Scanner;
 

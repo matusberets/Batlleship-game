@@ -36,7 +36,6 @@ public class Battleship2 {
 
         String[] playersName = {"PLAYER 1", "PLAYER 2"};
         int[] playersOrderArray = {1,2};
-        int playersOrder = 0;
         final int shipsMax = 5;
 
         Scanner input = new Scanner(System.in);
