@@ -1,0 +1,4 @@
+Today is a Monday 14th of June 2021.
+
+I am "Matus" trying to move my knowledge "Matus" until I can start 2nd part of my Java journey,
+so today I wanted to experienced "Matus" how does reading from a file, Scanner class "Matus" works !
