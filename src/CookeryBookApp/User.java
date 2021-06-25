@@ -1,15 +1,10 @@
 package CookeryBookApp;
 
-import java.util.Date;
-import java.util.Scanner;
-
 public class User {
     // define all users states / variables
     String firstName;
     String surname;
     String passWord;
-
-    // define get and set methods for variables
 
     public String getFirstName() {
         return firstName;

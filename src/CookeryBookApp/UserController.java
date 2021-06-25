@@ -1,5 +1,7 @@
 package CookeryBookApp;
 
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
 import java.io.IOException;
@@ -27,13 +29,37 @@ public class UserController {
             }
         }
         try {
-            FileWriter file = new FileWriter("/home/tamaber/IdeaProjects/MatusLearnJava/src/CookeryBookApp/users.txt");
-            file.write(user.getFirstName() + " " + user.getSurname() + " " + user.getPassWord());
-            file.close();
-            System.out.println("User's data successfully recorded");
+            File fileReader = new File("/home/tamaber/IdeaProjects/MatusLearnJava/src/CookeryBookApp/users.txt");
+            Scanner inputScanner = new Scanner(fileReader);
+            String headerFile = "";
+            if (inputScanner.hasNext()) {
+                headerFile = inputScanner.next();
+            }
+            String header = "Id FirstName Surname Password";
+
+            FileWriter file = new FileWriter("/home/tamaber/IdeaProjects/MatusLearnJava/src/CookeryBookApp/users.txt", true);
+            BufferedWriter bw = new BufferedWriter(file);
+            // create a header if it does not exist
+            if (headerFile.isEmpty()) {
+                bw.write(header);
+                bw.newLine();
+                bw.close();
+            }
+            bw.write(user.getFirstName() + " " + user.getSurname() + " " + user.getPassWord());
+            bw.newLine();
+            bw.close();
+            System.out.println("\nUser's data successfully recorded");
+            inputScanner.close();
         } catch (IOException e) {
             System.out.println("An error occurred while recording user data");
             e.printStackTrace();
         }
     }
+    public static void userLogin(Scanner input) {
+        System.out.println("Time to develop this method is coming soon ! :)\nCome back tomorrow, you might find a progress");
+    }
+    public static void addReceipt(Scanner input) {
+        System.out.println("Time to develop this method is coming soon ! :)\nCome back tomorrow, you might find a progress");
+    }
 }
+
