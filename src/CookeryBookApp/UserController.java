@@ -35,7 +35,7 @@ public class UserController {
             if (inputScanner.hasNext()) {
                 headerFile = inputScanner.next();
             }
-            String header = "Id FirstName Surname Password";
+            String header = "FirstName Surname Password";
 
             FileWriter file = new FileWriter("/home/tamaber/IdeaProjects/MatusLearnJava/src/CookeryBookApp/users.txt", true);
             BufferedWriter bw = new BufferedWriter(file);
@@ -43,23 +43,21 @@ public class UserController {
             if (headerFile.isEmpty()) {
                 bw.write(header);
                 bw.newLine();
-                bw.close();
             }
             bw.write(user.getFirstName() + " " + user.getSurname() + " " + user.getPassWord());
             bw.newLine();
             bw.close();
-            System.out.println("\nUser's data successfully recorded");
-            inputScanner.close();
+            System.out.println("\nUser's data successfully recorded\n");
         } catch (IOException e) {
             System.out.println("An error occurred while recording user data");
             e.printStackTrace();
         }
     }
     public static void userLogin(Scanner input) {
-        System.out.println("Time to develop this method is coming soon ! :)\nCome back tomorrow, you might find a progress");
+        System.out.println("Time to develop this method is coming soon ! :)\nCome back tomorrow, you might find a progress\n");
     }
     public static void addReceipt(Scanner input) {
-        System.out.println("Time to develop this method is coming soon ! :)\nCome back tomorrow, you might find a progress");
+        System.out.println("Time to develop this method is coming soon ! :)\nCome back tomorrow, you might find a progress\n");
     }
 }
 
